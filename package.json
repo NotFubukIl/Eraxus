@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "consolerotate": "^1.0.2",
+    "discordtokeninfos": "^1.0.6",
+    "fs": "^0.0.1-security",
+    "readline-sync": "^1.4.10",
+    "request": "^2.88.2",
+    "sync-color": "^1.0.6",
+    "sync-fetch": "^0.3.1"
+  },
+  "name": "eraxus",
+  "version": "1.0.0",
+  "description": " A simple Discord MultiTool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "!\"Dialz",
+  "license": "ISC"
+}

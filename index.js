@@ -2,13 +2,14 @@ function clear() {
     return console.log("\033c")
 }
 const fetch = require("sync-fetch")
-const Color = require("sync-color"); //Color.init()
+const Color = require("sync-color");
 const request = require("request")
 const readline = require("readline-sync")
 const ConsoleRotato = require("consolerotate")
 const Discord = require("discordtokeninfos")
 const fs = require("fs")
 if (!fs.existsSync("./images")) fs.mkdirSync("./images")
+Color.init()
 ConsoleRotato("Eraxus", 50)
 
 class Eraxus {

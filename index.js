@@ -261,7 +261,7 @@ async function main() {
                 |(_/o\\_)|                                 [15] Generate Hentai Pics        |  [16] Generate LGBT Pics
                 '._____.'`))
 
-    var Question = Number(readline.question(Color.InitGradient("blue", "magenta")("What Do Your Want To Do ?: ")))
+    var Question = Number(readline.question(Color.InitGradient("blue", "magenta")("What Do You Want To Do ?: ")))
 
     switch (Question) {
         default:

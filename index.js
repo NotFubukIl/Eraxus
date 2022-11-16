@@ -6,7 +6,7 @@ const Color = require("sync-color");
 const request = require("request")
 const readline = require("readline-sync")
 const ConsoleRotato = require("consolerotate")
-const Discord = require("discordtokeninfos")
+const Discord = require("discordinfos")
 const fs = require("fs")
 if (!fs.existsSync("./images")) fs.mkdirSync("./images")
 Color.init()
